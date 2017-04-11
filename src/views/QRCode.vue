@@ -1,7 +1,9 @@
 <template>
   <div class="qrcode">
     <navbar></navbar>
+    <div class="img">
     <img src="../assets/image/qrCode.png">
+    </div>
     <page-footer></page-footer>
   </div>
 </template>
@@ -22,5 +24,10 @@ export default {
 <style scoped>
 .qrcode {
   text-align: center;
+}
+
+.img {
+  height: 400px;
+  padding-top: 50px;
 }
 </style>
