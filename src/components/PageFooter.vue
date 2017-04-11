@@ -7,7 +7,7 @@
       {{ title }}
     </div>
     <div v-if="index==1" class="footer-item">
-      <img src="../assets/image/weixin.png">
+      <img src="../assets/image/weixin.jpg">
       {{ title }}
     </div>
     </router-link>
@@ -44,13 +44,13 @@ export default {
   height: 100%;
   float: right;
   color: white;
-  font-size: 25px;
+  font-size: 20px;
   text-align: center;
   padding: 60px 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 img {
-  width: 30px;
+  width: 20px;
 }
 </style>

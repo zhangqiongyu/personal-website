@@ -16,8 +16,8 @@ export default {
       themeTitle: [
         'Home',
         'Blog',
-        'Resume',
         'Work',
+        'Resume',
         'About'
       ],
       themeRouter: [
