@@ -1,7 +1,7 @@
 <template>
-  <div class="hello">
+  <div class="qrcode">
     <navbar></navbar>
-    尚未开通，敬请期待
+    <img src="../assets/image/qrCode.png">
     <page-footer></page-footer>
   </div>
 </template>
@@ -11,11 +11,7 @@ import NavBar from '@/components/NavBar'
 import PageFooter from '@/components/PageFooter'
 
 export default {
-  name: 'hello',
-  data () {
-    return {
-    }
-  },
+  name: 'qrcode',
   components: {
     'navbar': NavBar,
     'page-footer': PageFooter
@@ -24,5 +20,7 @@ export default {
 </script>
 
 <style scoped>
-
+.qrcode {
+  text-align: center;
+}
 </style>

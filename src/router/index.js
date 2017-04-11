@@ -5,10 +5,12 @@ import Blog from '@/views/Blog'
 import Work from '@/views/Work'
 import Resume from '@/views/Resume'
 import About from '@/views/About'
+import QRCode from '@/views/QRCode'
 
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -34,6 +36,11 @@ export default new Router({
       path: '/about',
       name: 'about',
       component: About
+    },
+    {
+      path: '/qrcode',
+      name: 'qrcode',
+      component: QRCode
     }
   ]
 })

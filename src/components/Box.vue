@@ -17,8 +17,8 @@ export default {
     return {
       themeRouter: [
         {name: 'blog'},
-        {name: 'work'},
         {name: 'resume'},
+        {name: 'work'},
         {name: 'about'}
       ]
     }
@@ -35,7 +35,7 @@ export default {
 
 <style scoped>
 .boxes {
-  height: 1200px;
+  height: 1000px;
   margin-left: 6.5%;
   margin-right: 6.5%;
 }

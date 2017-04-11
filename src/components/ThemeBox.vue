@@ -15,14 +15,14 @@ export default {
     return {
       boxTitle: [
         'Blog',
-        'Work',
         'Resume',
+        'Work',
         'About'
       ],
       boxDetail: [
         'This is my blog, just click this and have a look at what I am usually thinking!',
-        'To see what I can do and what I am interested in, to know!',
         'Do you want to hire me? Or do you have some advice?',
+        'To see what I can do and what I am interested in, to know!',
         'To know something about my personal website and to know some message about me!'
       ]
     }

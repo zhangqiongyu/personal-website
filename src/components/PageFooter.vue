@@ -1,16 +1,18 @@
 <template>
   <div class="page-footer">
     <div v-for="(title,index) in titles">
-    <router-link :to=routerFooter[index]>
-    <div v-if="index==0" class="footer-item">
-      <img src="../assets/image/github.jpg">
-      {{ title }}
-    </div>
-    <div v-if="index==1" class="footer-item">
-      <img src="../assets/image/weixin.jpg">
-      {{ title }}
-    </div>
-    </router-link>
+      <a v-if="index==0" href="https://github.com/zhangqiongyu/" target="_blank">
+      <div class="footer-item">
+        <img src="../assets/image/github.jpg">
+        {{ title }}
+      </div>
+      </a>
+      <router-link v-if="index==1" :to=routerTo>
+      <div class="footer-item">
+        <img src="../assets/image/weixin.jpg">
+        {{ title }}
+      </div>
+      </router-link>
     </div>
   </div>
 </template>
@@ -24,10 +26,9 @@ export default {
         'Github',
         'WeiXin'
       ],
-      routerFooter: [
-        {name: 'blog'},
-        {name: 'about'}
-      ]
+      routerTo: {
+        name: 'qrcode'
+      }
     }
   }
 }
@@ -46,7 +47,7 @@ export default {
   color: white;
   font-size: 20px;
   text-align: center;
-  padding: 60px 0;
+  margin: 60px 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 

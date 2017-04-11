@@ -16,15 +16,15 @@ export default {
       themeTitle: [
         'Home',
         'Blog',
-        'Work',
         'Resume',
+        'Work',
         'About'
       ],
       themeRouter: [
         {name: 'index'},
         {name: 'blog'},
-        {name: 'work'},
         {name: 'resume'},
+        {name: 'work'},
         {name: 'about'}
       ]
     }
