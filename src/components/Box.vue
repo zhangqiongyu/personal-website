@@ -35,7 +35,7 @@ export default {
 
 <style scoped>
 .boxes {
-  height: 1000px;
+  height: 900px;
   margin-left: 6.5%;
   margin-right: 6.5%;
 }

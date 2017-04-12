@@ -3,14 +3,22 @@
     <div v-for="(title,index) in titles">
       <a v-if="index==0" href="https://github.com/zhangqiongyu/" target="_blank">
       <div class="footer-item">
-        <img src="../assets/image/github.jpg">
-        {{ title }}
+        <div class="img">
+          <img class="github" src="../assets/image/github.png">
+        </div>
+        <div class="text">
+          {{ title }}
+        </div>
       </div>
       </a>
       <router-link v-if="index==1" :to=routerTo>
       <div class="footer-item">
-        <img src="../assets/image/weixin.jpg">
-        {{ title }}
+        <div class="img">
+          <img class="weixin" src="../assets/image/weixin.png">
+        </div>
+        <div class="text">
+          {{ title }}
+        </div>
       </div>
       </router-link>
     </div>
@@ -23,8 +31,8 @@ export default {
   data () {
     return {
       titles: [
-        'Github',
-        'WeiXin'
+        'GITHUB',
+        'WEIXIN'
       ],
       routerTo: {
         name: 'qrcode'
@@ -35,23 +43,43 @@ export default {
 </script>
 
 <style scoped>
+@font-face {
+  font-family: BitterBold;
+  src: url(../assets/fonts/Bitter-Bold-webfont.woff);
+}
+
 .page-footer {
-  height: 150px;
+  height: 145px;
   background-color: rgb(48,48,48);
 }
 
 .footer-item {
-  width: 20%;
+  width: 15%;
   height: 100%;
   float: right;
   color: white;
-  font-size: 20px;
+  font-size: 17px;
   text-align: center;
-  margin: 60px 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'BitterBold',Georgia,serif;
+  margin: 45px 0 45px 45px;
 }
 
 img {
-  width: 20px;
+  width: 120%;
+}
+
+.github {
+  width: 90%;
+}
+
+.img {
+  width: 20%;
+  float: left;
+}
+
+.text {
+  float: left;
+  padding: 10px 0;
+  text-align: left;
 }
 </style>
