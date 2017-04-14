@@ -1,10 +1,7 @@
 <template>
   <div class="boxes">
-    <router-link v-for="(title, index) in boxTitle" :to=themeRouter[index]>
-      <div class="box">      
-        <div :style="{'background-image': getBgImg(index)}" class="box-header"></div>
-        <h2>{{ boxTitle[index] }}</h2>
-        <div class="box-text">{{ boxDetail[index] }}</div>
+    <router-link v-for="index in 4" :to=themeRouter[index-1]>
+      <div :style="{'background-image': getBgImg(index-1)}" class="box">
       </div>
     </router-link>
   </div>
@@ -51,7 +48,7 @@ export default {
 
 .box-header {
   width: 100%;
-  height: 150px;
+  height: 100%;
 }
 
 h2 {

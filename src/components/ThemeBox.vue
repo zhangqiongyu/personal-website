@@ -2,7 +2,7 @@
   <div class="theme-box">
     <h1>Backend And Frontend</h1>
     <h3>By software engineer, zhangqy</h3>
-    <box :boxTitle="boxTitle" :boxDetail="boxDetail"></box>
+    <box></box>
   </div>
 </template>
 
@@ -11,22 +11,6 @@ import Box from './Box'
 
 export default {
   name: 'themebox',
-  data () {
-    return {
-      boxTitle: [
-        'Blog',
-        'Resume',
-        'Work',
-        'About'
-      ],
-      boxDetail: [
-        'This is my blog, just click this and have a look at what I am usually thinking!',
-        'Do you want to hire me? Or do you have some advice?',
-        'To see what I can do and what I am interested in, to know!',
-        'To know something about my personal website and to know some message about me!'
-      ]
-    }
-  },
   components: {
     'box': Box
   }
