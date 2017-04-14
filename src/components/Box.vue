@@ -1,13 +1,14 @@
 <template>
   <div class="boxes">
-    <router-link v-for="index in 4" :to=themeRouter[index-1]>
-      <div :style="{'background-image': getBgImg(index-1)}" class="box">
-      </div>
+    <router-link v-for="index in 4" class="box" :to=themeRouter[index-1] :style="{'background-image': getBgImg[index - 1]}"
+      @mouseenter.native="updateBgImg(index-1)" @mouseleave.native="updateBgImg(index-1)">
     </router-link>
   </div>
 </template>
 
 <script>
+let options = ['blog', 'resume', 'work', 'about']
+
 export default {
   name: 'boxes',
   data () {
@@ -17,14 +18,25 @@ export default {
         {name: 'resume'},
         {name: 'work'},
         {name: 'about'}
-      ]
+      ],
+      isActive: [true, true, true, true]
     }
   },
-  props: ['boxTitle', 'boxDetail'],
+  computed: {
+    getBgImg () {
+      return this.isActive.map((item, index) => {
+        if (item) {
+          return 'url(' + require('../assets/image/' + options[index] + '.svg') + ')'
+        } else {
+          return 'url(' + require('../assets/image/' + options[index] + '-hover.svg') + ')'
+        }
+      })
+    }
+  },
   methods: {
-    getBgImg: function (index) {
-      let options = ['blog', 'resume', 'work', 'about']
-      return 'url(' + require('../assets/image/' + options[index] + '.svg') + ')'
+    updateBgImg: function (index) {
+      this.isActive[index] = !this.isActive[index]
+      this.isActive = [].concat(this.isActive)
     }
   }
 }
@@ -44,28 +56,5 @@ export default {
   margin-left: 1.25%;
   margin-right: 1.25%;
   background-color: white;
-}
-
-.box-header {
-  width: 100%;
-  height: 100%;
-}
-
-h2 {
-  text-align: center;
-  color: rgb(105,105,105);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.box-text {
-  text-align: center;
-  padding: 20px;
-  color: rgb(135,135,135);
-  font-size: 17px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-a:hover {
-  color: white;
 }
 </style>

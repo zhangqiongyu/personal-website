@@ -7,7 +7,7 @@
 xmlns="http://www.w3.org/2000/svg">
 
 <rect width="300" height="350"
-style="fill:white;stroke-width:1;
+style="fill:rgb(244,126,126);stroke-width:1;
 stroke:rgb(244, 244, 244)"/>
 
 <rect width="300" height="64"
@@ -19,13 +19,13 @@ stroke-width="10" fill="rgb(244,126,126)"/>
 
 <text x="105" y="75" fill="white" style="font-size: 50"> 📃</text>
 
-<text x="80" y="195" fill="rgb(105,105,105)"
+<text x="80" y="195" fill="white"
 style="font-size: 25; font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: 900;">Resume</text>
 
-<text x="28" y="250" fill="rgb(135,135,135)"
+<text x="28" y="250" fill="rgb(210,210,210)"
 style="font-size: 17; font-family: Gill Sans,Gill Sans MT,Calibri,Trebuchet MS,sans-serif;">Do you want to hire me? Or</text>
 
-<text x="32" y="275" fill="rgb(135,135,135)"
+<text x="32" y="275" fill="rgb(210,210,210)"
 style="font-size: 17; font-family: Gill Sans,Gill Sans MT,Calibri,Trebuchet MS,sans-serif;">do you have some advice?</text>
 
 </svg>
