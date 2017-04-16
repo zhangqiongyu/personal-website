@@ -43,11 +43,6 @@ export default {
 </script>
 
 <style scoped>
-@font-face {
-  font-family: BitterBold;
-  src: url(../assets/fonts/Bitter-Bold-webfont.woff);
-}
-
 .page-footer {
   height: 145px;
   background-color: rgb(48,48,48);

@@ -5,7 +5,6 @@ import App from './App'
 import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
-// import MarkdownIt from 'markdown-it'
 
 Vue.use(ElementUI)
 // Vue.use(MarkdownIt)

@@ -28,16 +28,6 @@ export default {
 </script>
 
 <style scoped>
-@font-face {
-  font-family: "NovecentowideBookBold";
-  src: url(../assets/fonts/Novecentowide-Bold-webfont.woff);
-}
-
-@font-face {
-  font-family: "BitterRegular";
-  src: url(../assets/fonts/Bitter-Regular-webfont.woff);
-}
-
 .work-header {
   background-image: url(../assets/image/workBg.jpg);
   height: 485px;

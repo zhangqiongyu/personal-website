@@ -31,10 +31,6 @@ export default {
 </script>
 
 <style scoped>
-@font-face {
-  font-family: "BitterRegular";
-  src: url(../assets/fonts/Bitter-Regular-webfont.woff);
-}
 .about {
   background-image: url(../assets/image/aboutBg.jpg);
   background-size: 100% 100%;
