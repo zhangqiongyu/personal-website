@@ -37,18 +37,23 @@ export default {
 }
 
 .content {
+  background-color: white;
+  opacity: 0.6;
   height: 450px;
+  margin: 80px;
 }
 
 h3 {
+  padding-top: 100px;
   font-size: 1.45em;
   font-family: "BitterRegular", Georgia, serif;
   color: white;
   text-align: center;
+  color: rgb(92,92,108);
 }
 
 p {
-  color: white;
+  color: rgb(92,92,108);
   font-family: "BitterRegular", Georgia, serif;
   font-size: 1.1em;
   padding: 0 10%;

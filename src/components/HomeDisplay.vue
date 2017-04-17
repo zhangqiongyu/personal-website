@@ -1,5 +1,5 @@
 <template>
-  <div class="display">
+  <div class="home-display">
     <h1>Latest blogs</h1>
     <h3>Here are some blogs that I think may be helpful for you!</h3>
     <carousel></carousel>
@@ -10,7 +10,7 @@
 import Carousel from './Carousel'
 
 export default {
-  name: 'display',
+  name: 'homeDisplay',
   components: {
     'carousel': Carousel
   }
@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style scoped>
-.display {
+.home-display {
   height: 600px;
   background-image: url(../assets/image/displayBg.jpg);
 }
@@ -27,7 +27,7 @@ h1 {
   text-align: center;
   margin-top: 0;
   padding-top: 80px;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: "NovecentowideBookBold",Arial,sans-serif;
   color: rgb(75,168,160);
 }
 

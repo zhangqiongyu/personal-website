@@ -1,18 +1,18 @@
 <template>
   <div class="theme-box">
-    <h1>Backend And Frontend</h1>
+    <h1>Choose A Program Path</h1>
     <h3>By software engineer, zhangqy</h3>
-    <box></box>
+    <boxes></boxes>
   </div>
 </template>
 
 <script>
-import Box from './Box'
+import Boxes from './Boxes'
 
 export default {
   name: 'themebox',
   components: {
-    'box': Box
+    'boxes': Boxes
   }
 }
 </script>
@@ -29,7 +29,7 @@ h1 {
   background-color: rgb(244, 244, 244);
   padding-top: 80px;
   margin-top: 0;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', Geneva, Verdana, sans-serif;
+  font-family: "NovecentowideBookBold",Arial,sans-serif;
 }
 
 h3 {
