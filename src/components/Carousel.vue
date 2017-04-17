@@ -1,8 +1,9 @@
 <template>
   <div class="carousel">
-    <el-carousel :interval="4000" type="card" height="300px">
-      <el-carousel-item v-for="index in 4" :style="{'background-image': getBgImg(index-1)}">
-      <h3>{{ index }}</h3>
+    <el-carousel :interval="5000" arrow="always" heigth="500px">
+      <!--el-carousel-item v-for="item in 4" :style="{'background-image': getBgImg(index-1)}"-->
+      <el-carousel-item v-for="item in 4">
+        <h3>{{ item }}</h3>
       </el-carousel-item>
     </el-carousel>
   </div>
@@ -32,11 +33,19 @@ export default {
 
 <style scoped>
 .el-carousel__item h3 {
-color: #475669;
-font-size: 14px;
-opacity: 0.75;
-line-height: 200px;
-margin: 0;
+  color: #475669;
+  font-size: 18px;
+  opacity: 0.75;
+  line-height: 300px;
+  margin: 0;
+}
+  
+.el-carousel__item:nth-child(2n) {
+   background-color: #99a9bf;
+}
+  
+.el-carousel__item:nth-child(2n+1) {
+  background-color: #d3dce6;
 }
 
 .el-carousel__item {
@@ -45,6 +54,6 @@ margin: 0;
 }
 
 .carousel {
-  margin: 80px 240px;
+  margin: 0 240px;
 }
 </style>

@@ -2,18 +2,12 @@
   <div class="home-display">
     <h1>Latest blogs</h1>
     <h3>Here are some blogs that I think may be helpful for you!</h3>
-    <carousel></carousel>
   </div>
 </template>
 
 <script>
-import Carousel from './Carousel'
-
 export default {
-  name: 'homeDisplay',
-  components: {
-    'carousel': Carousel
-  }
+  name: 'homeDisplay'
 }
 </script>
 

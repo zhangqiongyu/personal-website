@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '@/views/Index'
 import Blog from '@/views/Blog'
+import Article from '@/views/Article.vue'
 import Work from '@/views/Work'
 import Resume from '@/views/Resume'
 import About from '@/views/About'
@@ -21,6 +22,11 @@ export default new Router({
       path: '/blog',
       name: 'blog',
       component: Blog
+    },
+    {
+      path: '/blog/article/:id',
+      name: 'article',
+      component: Article
     },
     {
       path: '/resume',
