@@ -5,22 +5,16 @@
       <carousel></carousel>
     </div>
     <div class="blog-catalogue">
-      <div v-for="article in articles">
-        <router-link :to="{name: 'article', params: {id: article.id}}">
-          <el-col :span="7" :offset="0" :key="article.id">
-          <el-card :body-style="{ padding: '0px' }">
-            <!--img :src="String(article.images).replace(/http\w{0,1}:\/\/p/g, 'https://images.weserv.nl/?url=p')" v-if="article.images"-->
-            <div style="padding: 14px;float:left;">
-              <span class="title">{{ article.title }}</span>
-              <div class="bottom clearfix">
-                <div class="abstract">{{ article.abstract }}</div>
-                <time class="time">{{ article.created_time.slice(0, 10) }}</time>
-                <el-button type="text" class="button">点击阅读</el-button>
-              </div>
-            </div>            
-          </el-card>
-          </el-col>
-        </router-link>
+      <div class="article-list">
+        <div v-for="article in articles" class="box">
+          <router-link :to="{name: 'article', params: {id: article.id}}">
+            <img :src=article.bg_img v-if="article.bg_img">
+            <h2 class="title">{{ article.title }}</h2>
+            <div v-if="article.abstract" class="abstract">{{ article.abstract }}</div>
+            <div v-else class="abstract">{{ article.body.slice(0,54) }}</div>
+            <footer>{{ article.created_time.slice(0,10) }}</footer>
+          </router-link>
+        </div>
       </div>
     </div>
     <page-footer></page-footer>
@@ -69,49 +63,47 @@ export default {
 }
 
 .blog-catalogue {
-  background-image: url(../assets/image/blogCatalogue.jpg);
+  background-image: url(../assets/image/blogCatalogue.png);
+  background-color: rgb(245,245,245);
   background-size: 100%;
   height: 1594px;
-  opacity: 1;
 }
 
-.el-col {
-  margin: 10%;
+a {
+  text-decoration: none;
 }
 
-.abstract, .time {
-  font-size: 1em;
-  color: rgb(155, 155, 155);
-  margin: 10px;
+.article-list {
+  width: 93%;
+  background-color: red;
+  height: atuo;
+  margin: 0 3.5%;
 }
 
-.bottom {
-  margin-top: 13px;
-  line-height: 12px;
+.box {
+  width: 31.0%;
+  margin: 1%;
+  float: left;
+  background-color: rgb(255,255,255);
+  border: 2px rgb(225,225,225) solid;
 }
 
-.button {
-  padding: 0;
-  float: right;
-}
-
-.image {
+img {
   width: 100%;
-  display: block;
-}
-
-.clearfix:before,
-.clearfix:after {
-    display: table;
-    content: "";
-}
-
-.clearfix:after {
-    clear: both
+  height: 150px;
 }
 
 .title {
   font-size: 1.4em;
   color: rgb(76,76,76);
+  margin: 1em;
+  font-family: "BitterBold",Georgia,serif;
+}
+
+.abstract, footer {
+  margin: 1em;
+  color: rgb(155,155,155);
+  font-size: 1em;
+  font-family: "BitterRegular", Georgia, serif;
 }
 </style>
