@@ -1,7 +1,7 @@
 <template>
   <div class="boxes">
     <router-link v-for="index in 4" class="box" :to=themeRouter[index-1] :style="{'background-image': getBgImg[index - 1]}"
-      @mouseenter.native="updateBgImg(index-1)" @mouseleave.native="updateBgImg(index-1)">
+      @mouseenter.native="updateBgImg(index-1)" @mouseleave.native="updateBgImg(index-1)" :key="index.id">
     </router-link>
   </div>
 </template>
@@ -44,7 +44,7 @@ export default {
 
 <style scoped>
 .boxes {
-  height: 900px;
+  height: 560px;
   margin-left: 6.5%;
   margin-right: 6.5%;
 }

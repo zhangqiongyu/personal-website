@@ -1,0 +1,52 @@
+.adp-pagination {
+    text-align: center;
+    margin: 15px 0;
+    color: #c2d0df;
+    font-size: 12px;
+    line-height: 24px;
+}
+
+.adp-pagination button {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      line-height: 24px;
+      vertical-align: top;
+      box-sizing: content-box;
+      padding: 0;
+      background-color: #fff;
+      color: #c2d0df;
+      font-size: 20px;
+}
+
+.adp-pagination button.disabled:hover {
+        cursor: not-allowed;
+        color: #c2d0df;
+      }
+.adp-pagination button:hover {
+        color: #3fa9f5;
+      }
+.adp-pagination button i {
+        height: 24px;
+      }
+
+.adp-pagination ul {
+      display: inline-block;
+}
+
+.adp-pagination li {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        border: solid 1px #c2d0df;
+        border-right: 0;
+      }
+
+    .adp-pagination__pre {
+      border: solid 1px #c2d0df;
+      border-right: 0;
+    }
+
+    .adp-pagination__next {
+      border: solid 1px #c2d0df;
+    }

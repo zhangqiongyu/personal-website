@@ -7,6 +7,7 @@ import Work from '@/views/Work'
 import Resume from '@/views/Resume'
 import About from '@/views/About'
 import QRCode from '@/views/QRCode'
+import NotFound from '@/views/NotFound'
 
 Vue.use(Router)
 
@@ -19,7 +20,7 @@ export default new Router({
       component: Index
     },
     {
-      path: '/blog',
+      path: '/blog/page/:id',
       name: 'blog',
       component: Blog
     },
@@ -47,6 +48,10 @@ export default new Router({
       path: '/qrcode',
       name: 'qrcode',
       component: QRCode
+    },
+    {
+      path: '*',
+      component: NotFound
     }
   ]
 })

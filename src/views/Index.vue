@@ -3,7 +3,7 @@
     <navbar></navbar>
     <home-header></home-header>
     <theme-box></theme-box>
-    <home-display></home-display>
+    <!--home-display></home-display-->
     <page-footer></page-footer>
   </div>
 </template>

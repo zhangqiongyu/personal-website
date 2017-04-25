@@ -1,6 +1,6 @@
 <template>
   <div class="navbar">
-    <div class="nav-item" v-for="(title, index) in themeTitle">
+    <div class="nav-item" v-for="(title, index) in themeTitle" :key="title.id">
       <router-link :to=themeRouter[index]>
         {{title}}
       </router-link>
@@ -22,7 +22,7 @@ export default {
       ],
       themeRouter: [
         {name: 'index'},
-        {name: 'blog'},
+        {name: 'blog', params: {id: 1}},
         {name: 'resume'},
         {name: 'work'},
         {name: 'about'}

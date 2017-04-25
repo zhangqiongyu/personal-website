@@ -13,9 +13,9 @@ export function fetch (url) {
   })
 }
 
-// 获取blog封面信息
-export function fetchCoverInfo () {
-  return fetch(`/api/articles`)
+// 根据页数获取blog列表
+export function fetchInfoByPageId (pageId) {
+  return fetch(`/api/articles/?page=${pageId}`)
 }
 
 // 根据id获取对应文章内容

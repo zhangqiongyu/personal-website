@@ -1,9 +1,9 @@
 <template>
   <div class="carousel">
-    <el-carousel :interval="5000" arrow="always" heigth="500px">
+    <el-carousel :interval="3000" arrow="always" heigth="500px">
       <!--el-carousel-item v-for="item in 4" :style="{'background-image': getBgImg(index-1)}"-->
-      <el-carousel-item v-for="item in 4">
-        <h3>{{ item }}</h3>
+      <el-carousel-item v-for="(item, index) in backgroundImg" :style="{'background-image': 'url(' + item.bg_img + ')'}" :key=item.id>
+        <h3>{{ item.title }}</h3>
       </el-carousel-item>
     </el-carousel>
   </div>
@@ -22,18 +22,12 @@ export default {
       ]
     }
   },
-  methods: {
-    getBgImg: function (index) {
-      let options = ['vuejs', 'django', 'python', 'cpp']
-      return 'url(' + require('../assets/image/' + options[index] + '.jpg') + ')'
-    }
-  }
+  props: ['backgroundImg']
 }
 </script>
 
 <style scoped>
 .el-carousel__item h3 {
-  color: #475669;
   font-size: 18px;
   opacity: 0.75;
   line-height: 300px;
@@ -55,5 +49,9 @@ export default {
 
 .carousel {
   margin: 0 240px;
+}
+
+h3 {
+  text-align: center;
 }
 </style>
